@@ -14,12 +14,12 @@
             <var_000>
                 <var_name>CO_SIM_ACTIONS_DIR</var_name>
                 <!-- The Co-Simulator will get the ${CO_SIM_TVB_NEST_PATH} value on run-time -->
-                <var_value>${HOME}/multiscale-cosim-repos/TVB-NEST-usecase1/EBRAINS_WorkflowConfigurations/actions</var_value>
+                <var_value>${HOME}/EBRAINS_WorkflowConfigurations/actions</var_value>
             </var_000>
-            <!-- <var_001>
+            <var_001>
                 <var_name>CO_SIM_ROUTINES_DIR</var_name>
-                <var_value>${HOME}/TVB-NEST/launcher/routines</var_value>
-            </var_001> -->
+                <var_value>${HOME}/actions_adapters</var_value>
+            </var_001>
             <var_002>
                 <var_name>CO_SIM_EXECUTION_ENVIRONMENT</var_name>
                 <var_value>Local</var_value>
