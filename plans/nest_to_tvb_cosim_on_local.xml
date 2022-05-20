@@ -6,40 +6,58 @@
         <variables>
             <!--    
                 The values for the variables under this section, 
-                will be set on run-time when is required (e.g. ${CO_SIM_ENV_VAR})
+                will be set on run-time when is required (e.g. ${CO_SIM_ENV_VAR} or ${HOME})
                 and held on a python dictionary
                     
                 NOTE: the NAME of the variable is the dictionary KEY to have access to its value
             -->
             <var_000>
-                <var_name>CO_SIM_ACTIONS_DIR</var_name>
-                <!-- The Co-Simulator will get the ${CO_SIM_TVB_NEST_PATH} value on run-time -->
-                <var_value>${HOME}/EBRAINS_WorkflowConfigurations/actions</var_value>
+                <var_name>CO_SIM_ROOT_PATH</var_name>
+                <var_value>${CO_SIM_ROOT_PATH}</var_value>
             </var_000>
             <var_001>
-                <var_name>CO_SIM_ROUTINES_DIR</var_name>
-                <var_value>${HOME}/actions_adapters</var_value>
+                <var_name>CO_SIM_MODULES_ROOT_PATH</var_name>
+                <var_value>${CO_SIM_MODULES_ROOT_PATH}</var_value>
             </var_001>
             <var_002>
+                <var_name>CO_SIM_USE_CASE_ROOT_PATH</var_name>
+                <var_value>${CO_SIM_USE_CASE_ROOT_PATH}</var_value>
+            </var_002>
+            <var_003>
+                <var_name>CO_SIM_ACTIONS_PATH</var_name>
+                <!-- The Co-Simulator will get the ${CO_SIM_TVB_NEST_PATH} value on run-time -->
+                <var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/actions</var_value>
+            </var_003>
+            <var_004>
+                <var_name>CO_SIM_ROUTINES_PATH</var_name>
+                <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/actions_adapters</var_value>
+            </var_004>
+            <var_006>
                 <var_name>CO_SIM_EXECUTION_ENVIRONMENT</var_name>
                 <var_value>Local</var_value>
-            </var_002>
+            </var_006>
+            <var_007>
+                <var_name>CO_SIM_PARAMETERS_PATH</var_name>
+                <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/parameters</var_value>
+            </var_007>
         </variables>
         <parameters>
+            <!-- functional parameters specific to this (current) action plan -->
+            <!-- these CO_SIM_* parameters are created as a dictionary -->
             <par_000>
                 <par_name>CO_SIM_DELAY</par_name>
                 <par_value>100</par_value>
             </par_000>
             <par_001>
-                <par_name>CO_SIM_LOGS_DIR</par_name>
+                <par_name>CO_SIM_LOGS_PATH</par_name>
                 <par_value>/logs</par_value>
             </par_001>
             <par_002>
-                <par_name>CO_SIM_MONITORING_DATA_DIR</par_name>
+                <par_name>CO_SIM_MONITORING_DATA_PATH</par_name>
                 <par_value>/monitoring_data</par_value>
             </par_002>
             <par_003>
-                <par_name>CO_SIM_RESULTS_OUTPUT_DIR</par_name>
+                <par_name>CO_SIM_RESULTS_OUTPUT_PATH</par_name>
                 <par_value>/simulation_results</par_value>
             </par_003>
         </parameters>
@@ -50,15 +68,15 @@
             -->
             <arr_001>
                 <arr_duty>CO_SIM_ARRANGEMENT_CHECK_BEFORE_CREATION</arr_duty>
-                <arr_what>{CO_SIM_RESULTS_DIR}{CO_SIM_LOGS_DIR}</arr_what>
+                <arr_what>{CO_SIM_RESULTS_PATH}{CO_SIM_LOGS_PATH}</arr_what>
             </arr_001>
             <arr_002>
                 <arr_duty>CO_SIM_ARRANGEMENT_CHECK_BEFORE_CREATION</arr_duty>
-                <arr_what>{CO_SIM_RESULTS_DIR}{CO_SIM_MONITORING_DATA_DIR}</arr_what>
+                <arr_what>{CO_SIM_RESULTS_PATH}{CO_SIM_MONITORING_DATA_PATH}</arr_what>
             </arr_002>
             <arr_003>
                 <arr_duty>CO_SIM_ARRANGEMENT_CHECK_BEFORE_CREATION</arr_duty>
-                <arr_what>{CO_SIM_RESULTS_DIR}{CO_SIM_RESULTS_OUTPUT_DIR}</arr_what>
+                <arr_what>{CO_SIM_RESULTS_PATH}{CO_SIM_RESULTS_OUTPUT_PATH}</arr_what>
             </arr_003>
         </arrangement>
         <action_plan>
@@ -101,7 +119,6 @@
                 <action_xml>test_cosim_tvb.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_010>
-
             <!-- epilogue -->
             <action_012>
                 <!-- waiting until the preceding actions finishes -->

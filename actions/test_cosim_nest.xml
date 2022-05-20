@@ -10,10 +10,10 @@
             </var_000>
         </variables>
         <parameters>
-            <par_000>
-                <par_name>__no_parameter_name__</par_name>
-                <par_value>__no_parameter_value__</par_value>
-            </par_000>
+            <par_001>
+                <par_name>CO_SIM_SCIENTIFIC_PARAMETERS</par_name>
+                <par_value>{CO_SIM_PARAMETERS_PATH}/scientific/nest.xml</par_value>
+            </par_001>
         </parameters>
         <action>
             <launcher>
@@ -34,7 +34,7 @@
                 <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/TVB-NEST-usecase1/cosim_example_demos/TVB-NEST-demo/nest_elephant_tvb/nest/Balanced_network_reduce_co-sim.py</routine_code> -->
                 <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/TVB-NEST-usecase1/cosim_example_demos/TVB-NEST-demo/nest_elephant_tvb/app_nest.py</routine_code> -->
                 <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/my_forks/TVB-NEST-usecase1/actions_adapters/nest_simulator/nest_adapter.py</routine_code> -->
-                <routine_code>{CO_SIM_ROUTINES_DIR}/nest_simulator/nest_adapter.py</routine_code>
+                <routine_code>{CO_SIM_ROUTINES_PATH}/nest_simulator/nest_adapter.py</routine_code>
                 <routine_arguments>
                     <!-- <argv_1_comm_file>{CO_SIM_RESULTS_DIR}{CO_SIM_INPUT_FILE}</argv_1_comm_file>
                     <argv_2_delay>{CO_SIM_DELAY}</argv_2_delay> -->
