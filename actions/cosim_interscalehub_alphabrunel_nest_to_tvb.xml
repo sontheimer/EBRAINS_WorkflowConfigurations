@@ -12,7 +12,7 @@
         <parameters>
             <par_000>
                 <par_name>CO_SIM_SCIENTIFIC_PARAMETERS</par_name>
-                <par_value>{CO_SIM_PARAMETERS_PATH}/scientific/nest_to_tvb.xml</par_value>
+                <par_value>{CO_SIM_PARAMETERS_PATH}/scientific/interscale_hub.xml</par_value>
             </par_000>
         </parameters>
         <action>
