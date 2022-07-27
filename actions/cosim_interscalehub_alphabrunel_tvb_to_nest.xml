@@ -10,17 +10,17 @@
             </var_000>
         </variables>
         <parameters>
-            <par_001>
+            <par_000>
                 <par_name>CO_SIM_SCIENTIFIC_PARAMETERS</par_name>
-                <par_value>{CO_SIM_PARAMETERS_PATH}/scientific/nest.xml</par_value>
-            </par_001>
+                <par_value>{CO_SIM_PARAMETERS_PATH}/scientific/tvb_to_nest.xml</par_value>
+            </par_000>
         </parameters>
         <action>
             <launcher>
                 <launcher_command>{CO_SIM_LAUNCHER}</launcher_command>
                 <launcher_arguments>
                     <argv_1_option>-n</argv_1_option>
-                    <argv_1_value>1</argv_1_value>
+                    <argv_1_value>2</argv_1_value>
                 </launcher_arguments>
             </launcher>
             <performer>
@@ -30,15 +30,9 @@
                 </performer_arguments>
             </performer>
             <routine>
-                <!-- <routine_code>{CO_SIM_ROUTINES_DIR}/nest_elephant_tvb/translation/test_file/test_input_nest_to_tvb.py</routine_code> -->
-                <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/TVB-NEST-usecase1/cosim_example_demos/TVB-NEST-demo/nest_elephant_tvb/nest/Balanced_network_reduce_co-sim.py</routine_code> -->
-                <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/TVB-NEST-usecase1/cosim_example_demos/TVB-NEST-demo/nest_elephant_tvb/app_nest.py</routine_code> -->
-                <!-- <routine_code>/home/vagrant/multiscale-cosim-repos/my_forks/TVB-NEST-usecase1/actions_adapters/nest_simulator/nest_adapter.py</routine_code> -->
-                <routine_code>{CO_SIM_ROUTINES_PATH}/nest_simulator/nest_adapter.py</routine_code>
+                <routine_code>{CO_SIM_ROUTINES_PATH}/interscalehub/interscalehub_adapter.py</routine_code>
                 <routine_arguments>
-                    <!-- <argv_1_comm_file>{CO_SIM_RESULTS_DIR}{CO_SIM_INPUT_FILE}</argv_1_comm_file>
-                    <argv_2_delay>{CO_SIM_DELAY}</argv_2_delay> -->
-                    <argv_1_value>1</argv_1_value>
+                    <argv_1_value>2</argv_1_value>
                 </routine_arguments>
             </routine>
         </action>
