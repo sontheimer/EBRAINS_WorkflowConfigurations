@@ -40,6 +40,11 @@
                 <var_name>CO_SIM_PARAMETERS_PATH</var_name>
                 <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/parameters</var_value>
             </var_007>
+            <var_008>
+                <!-- where the co_sim_comm_ports.xml configuration file is located -->
+                <var_name>CO_SIM_COMMUNICATION_SETTINGS_PATH</var_name>
+                <var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/communication_settings</var_value>
+            </var_008>
         </variables>
         <parameters>
             <!-- functional parameters specific to this (current) action plan -->
@@ -60,6 +65,10 @@
                 <par_name>CO_SIM_RESULTS_OUTPUT_PATH</par_name>
                 <par_value>/simulation_results</par_value>
             </par_003>
+            <par_004>
+                <par_name>CO_SIM_COMMUNICATION_SETTINGS_XML</par_name>
+                <par_value>{CO_SIM_COMMUNICATION_SETTINGS_PATH}/co_sim_comm_ports.xml</par_value>
+            </par_004>
         </parameters>
         <arrangement>
             <!-- 
