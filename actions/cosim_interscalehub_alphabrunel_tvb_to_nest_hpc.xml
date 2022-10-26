@@ -19,8 +19,12 @@
             <launcher>
                 <launcher_command>{CO_SIM_LAUNCHER}</launcher_command>
                 <launcher_arguments>
-                    <argv_1_option>-n</argv_1_option>
-                    <argv_1_value>2</argv_1_value>
+                    <argv_1_option>--gres=gpus:0</argv_1_option>
+                    <argv_1_value>{CO_SIM_EMPTY}</argv_1_value> 
+                    <argv_2_option>-n</argv_2_option>
+                    <argv_2_value>2</argv_2_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
+                    <argv_3_option>--exact</argv_3_option>
+                    <argv_3_value>{CO_SIM_EMPTY}</argv_3_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
                 </launcher_arguments>
             </launcher>
             <performer>
@@ -30,12 +34,9 @@
                 </performer_arguments>
             </performer>
             <routine>
-                <!-- <routine_code>{CO_SIM_ROUTINES_DIR}/nest_elephant_tvb/translation/test_file/test_input_nest_to_tvb.py</routine_code> -->
                 <routine_code>{CO_SIM_ROUTINES_PATH}/interscalehub/interscalehub_adapter.py</routine_code>
                 <routine_arguments>
-                    <!-- <argv_1_comm_file>{CO_SIM_RESULTS_DIR}{CO_SIM_INPUT_FILE}</argv_1_comm_file>
-                    <argv_2_delay>{CO_SIM_DELAY}</argv_2_delay> -->
-                    <argv_1_value>1</argv_1_value>
+                    <argv_1_value>2</argv_1_value>
                 </routine_arguments>
             </routine>
         </action>
