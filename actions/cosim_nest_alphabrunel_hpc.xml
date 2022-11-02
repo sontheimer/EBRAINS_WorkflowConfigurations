@@ -22,7 +22,7 @@
                     <argv_1_option>--gres=gpus:0</argv_1_option>
                     <argv_1_value>{CO_SIM_EMPTY}</argv_1_value> 
                     <argv_2_option>-n</argv_2_option>
-                    <argv_2_value>2</argv_2_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
+                    <argv_2_value>1</argv_2_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
                     <argv_3_option>--exact</argv_3_option>
                     <argv_3_value>{CO_SIM_EMPTY}</argv_3_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
                 </launcher_arguments>
