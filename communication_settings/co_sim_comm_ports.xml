@@ -1,0 +1,25 @@
+<settings>
+    <co_simulation_communication_settings>
+        <!--
+        <title>Co-Sim Components Communication Settings</title>
+        <description>ZeroMQ Ports Number and Patterns</description>
+        -->
+        <!-- <variables> ... </variables> -->
+        <!-- <parameters> ...  </parameters> -->
+        <ORCHESTRATOR>
+            <MIN>59100</MIN>
+            <MAX>59120</MAX>
+            <MAX_TRIES>20</MAX_TRIES>
+        </ORCHESTRATOR>
+        <COMMAND_CONTROL>
+            <MIN>59121</MIN>
+            <MAX>59150</MAX>
+            <MAX_TRIES>30</MAX_TRIES>
+        </COMMAND_CONTROL>
+        <APPLICATION_COMPANION>
+            <MIN>59150</MIN>
+            <MAX>59200</MAX>
+            <MAX_TRIES>50</MAX_TRIES>
+        </APPLICATION_COMPANION>
+    </co_simulation_communication_settings>
+</settings>
