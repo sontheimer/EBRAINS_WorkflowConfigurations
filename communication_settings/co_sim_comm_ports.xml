@@ -21,5 +21,10 @@
             <MAX>59200</MAX>
             <MAX_TRIES>50</MAX_TRIES>
         </APPLICATION_COMPANION>
+        <APPLICATION_MANAGER>
+            <MIN>59201</MIN>
+            <MAX>59300</MAX>
+            <MAX_TRIES>100</MAX_TRIES>
+        </APPLICATION_MANAGER>
     </co_simulation_communication_settings>
 </settings>
