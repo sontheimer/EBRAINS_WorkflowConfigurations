@@ -19,14 +19,18 @@
             <launcher>
                 <launcher_command>{CO_SIM_LAUNCHER}</launcher_command>
                 <launcher_arguments>
-                    <argv_1_option>-n</argv_1_option>
-                    <argv_1_value>1</argv_1_value>
+                    <argv_1_option>--gres=gpus:0</argv_1_option>
+                    <argv_1_value>{CO_SIM_EMPTY}</argv_1_value> 
+                    <argv_2_option>-n</argv_2_option>
+                    <argv_2_value>1</argv_2_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
+                    <argv_3_option>--exact</argv_3_option>
+                    <argv_3_value>{CO_SIM_EMPTY}</argv_3_value>  <!-- change it in parser to accommodate more than one {CO_SIM_EMPTY}-->
                 </launcher_arguments>
             </launcher>
             <performer>
                 <performer_binary>python3</performer_binary>
                 <performer_arguments>
-                    <argv_01_empty>{CO_SIM_EMPTY}</argv_01_empty>
+                    <argv_01_empty>{CO_SIM_EMPTY}</argv_01_empty>  <!-- change it with something for example CO_SIM_NONE -->
                 </performer_arguments>
             </performer>
             <routine>
