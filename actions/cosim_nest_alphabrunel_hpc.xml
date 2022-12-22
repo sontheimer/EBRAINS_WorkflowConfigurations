@@ -28,7 +28,7 @@
                     <argv_04_option>--ntasks=</argv_04_option>
                     <argv_04_value>1</argv_04_value>
                     <argv_05_option>--cpus-per-task</argv_05_option>
-                    <argv_05_value>4</argv_05_value>
+                    <argv_05_value>1</argv_05_value>
                     <argv_06_option>--cpu-bind=</argv_06_option>
                     <argv_06_value>none</argv_06_value>
                     <argv_07_option>--gres=</argv_07_option>
