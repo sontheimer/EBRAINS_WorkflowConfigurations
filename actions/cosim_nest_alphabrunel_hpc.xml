@@ -34,7 +34,7 @@
                     <argv_07_option>--gres=</argv_07_option>
                     <argv_07_value>gpus:0</argv_07_value>
                     <argv_08_option>--nodelist=</argv_08_option>
-                    <argv_08_value>{CO_SIM_SLURM_NODE_000}</argv_08_value>
+                    <argv_08_value>{CO_SIM_SLURM_NODE_001}</argv_08_value>
                 </launcher_arguments>
             </launcher>
             <performer>
