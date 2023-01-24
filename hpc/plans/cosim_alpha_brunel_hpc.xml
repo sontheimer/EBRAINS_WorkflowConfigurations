@@ -45,6 +45,11 @@
                 <var_name>CO_SIM_COMMUNICATION_SETTINGS_PATH</var_name>
                 <var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/communication_settings</var_value>
             </var_008>
+            <var_009>
+                <!-- where the co_sim_comm_ports.xml configuration file is located -->
+                <var_name>CO_SIM_SERVICES_DEPLOYMENT_PATH</var_name>
+                <var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/hpc/deployments</var_value>
+            </var_009>
         </variables>
         <parameters>
             <!-- functional parameters specific to this (current) action plan -->
@@ -69,6 +74,10 @@
                 <par_name>CO_SIM_COMMUNICATION_SETTINGS_XML</par_name>
                 <par_value>{CO_SIM_COMMUNICATION_SETTINGS_PATH}/co_sim_comm_ports.xml</par_value>
             </par_004>
+            <par_005>
+                <par_name>CO_SIM_SERVICES_DEPLOYMENT_XML</par_name>
+                <par_value>{CO_SIM_SERVICES_DEPLOYMENT_PATH}/co_sim_services_on_same_node.xml</par_value>
+            </par_005>
         </parameters>
         <arrangement>
             <!-- 
