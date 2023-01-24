@@ -1,0 +1,21 @@
+<settings>
+    <co_simulation_services_deployment>
+        <!--
+        <title>Co-Sim Services Deployment Settings</title>
+        <description>Contains Services Names and their CO_SIM_SLURM_NODE_xxx
+                    where the service will be deployed (executed)</description>
+        -->
+        <!-- <variables> ... </variables> -->
+        <!-- <parameters> ...  </parameters> -->
+        <srun_options>
+            srun --exact --label --nodes=1 --ntasks=1 --cpus-per-task=1 --cpu-bind=none --gres=gpus:0
+        </srun_options>
+        <deployment_settings>
+            <APPLICATION_COMPANION>CO_SIM_SLURM_NODE_000</APPLICATION_COMPANION>
+            <COMMAND_CONTROL>CO_SIM_SLURM_NODE_000</COMMAND_CONTROL>
+            <ORCHESTRATOR>CO_SIM_SLURM_NODE_000</ORCHESTRATOR>
+            <PROXY_MANAGER_SERVER>CO_SIM_SLURM_NODE_000</PROXY_MANAGER_SERVER>
+            <STEERING_SERVICE>CO_SIM_SLURM_NODE_000</STEERING_SERVICE>
+        </deployment_settings>
+    </co_simulation_services_deployment>
+</settings>
