@@ -43,7 +43,7 @@
             <var_008>
                 <!-- where the co_sim_comm_ports.xml configuration file is located -->
                 <var_name>CO_SIM_COMMUNICATION_SETTINGS_PATH</var_name>
-		<var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/general_settings</var_value>
+		<var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/general</var_value>
             </var_008>
         </variables>
         <parameters>
