@@ -26,11 +26,11 @@
             <var_003>
                 <var_name>CO_SIM_ACTIONS_PATH</var_name>
                 <!-- The Co-Simulator will get the ${CO_SIM_TVB_NEST_PATH} value on run-time -->
-                <var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/actions</var_value>
+		<var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/usecase/local/actions</var_value>
             </var_003>
             <var_004>
                 <var_name>CO_SIM_ROUTINES_PATH</var_name>
-                <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/actions_adapters</var_value>
+                <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/action_adapters_alphabrunel</var_value>
             </var_004>
             <var_006>
                 <var_name>CO_SIM_EXECUTION_ENVIRONMENT</var_name>
@@ -40,6 +40,11 @@
                 <var_name>CO_SIM_PARAMETERS_PATH</var_name>
                 <var_value>{CO_SIM_USE_CASE_ROOT_PATH}/parameters</var_value>
             </var_007>
+            <var_008>
+                <!-- where the co_sim_comm_ports.xml configuration file is located -->
+                <var_name>CO_SIM_COMMUNICATION_SETTINGS_PATH</var_name>
+		<var_value>{CO_SIM_MODULES_ROOT_PATH}/EBRAINS_WorkflowConfigurations/general</var_value>
+            </var_008>
         </variables>
         <parameters>
             <!-- functional parameters specific to this (current) action plan -->
@@ -60,6 +65,10 @@
                 <par_name>CO_SIM_RESULTS_OUTPUT_PATH</par_name>
                 <par_value>/simulation_results</par_value>
             </par_003>
+            <par_004>
+                <par_name>CO_SIM_COMMUNICATION_SETTINGS_XML</par_name>
+                <par_value>{CO_SIM_COMMUNICATION_SETTINGS_PATH}/co_sim_comm_ports.xml</par_value>
+            </par_004>
         </parameters>
         <arrangement>
             <!-- 
@@ -101,22 +110,30 @@
             <!-- main plan action proceeding -->
             <action_004>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_xml>test_cosim_nest.xml</action_xml>
+                <action_goal>CO_SIM_SIMULATION</action_goal>
+                <action_realm>NEST</action_realm>
+                <action_label>NEST_SIMULATOR</action_label>
+                <action_xml>cosim_nest_alphabrunel.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_004>
             <action_006>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_xml>test_cosim_interscalehub_nest_to_tvb.xml</action_xml>
+                <action_goal>CO_SIM_DATA_TRANSFORMATION</action_goal>
+                <action_xml>cosim_interscalehub_alphabrunel_nest_to_tvb.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_006>
             <action_008>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_xml>test_cosim_interscalehub_tvb_to_nest.xml</action_xml>
+                <action_goal>CO_SIM_DATA_TRANSFORMATION</action_goal>
+                <action_xml>cosim_interscalehub_alphabrunel_tvb_to_nest.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_008>
             <action_010>
                 <action_type>CO_SIM_ACTION</action_type>
-                <action_xml>test_cosim_tvb.xml</action_xml>
+                <action_goal>CO_SIM_SIMULATION</action_goal>
+                <action_realm>TVB</action_realm>
+                <action_label>TVB_SIMULATOR</action_label>
+                <action_xml>cosim_tvb_alphabrunel.xml</action_xml>
                 <action_launch_method>CO_SIM_CONCURRENT_ACTION</action_launch_method>
             </action_010>
             <!-- epilogue -->
